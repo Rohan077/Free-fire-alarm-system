@@ -1,8 +1,8 @@
 # free_project
 
-Free
+Free or fire recognition emergency element for now is a smart fire alarming application which is build for precautions and preventions of fire incidents. Free is built to fetch current location and the nearest fire stations to the users and help them to estahblish efficient communication and no-time support from the fire fighters. Free is going to be a futuristic smart alert system where it will detect fire incidents and help users to notify about the occurrence, images and location of the fatal fire and will automatically call the nearest fire station and send them report without the intervention of user's activity.
 
-<pre><img align="left" width="300" height="500" src="https://github.com/Rohan077/Free-fire-alarm-system/blob/master/images/ezgif.com-gif-maker.gif"><img align="left" width="300" height="500" src="https://github.com/Rohan077/Free-fire-alarm-system/blob/master/images/ezgif.com-gif-maker%20(1).gif"></pre>
+<pre><img align="left" width="300" height="550" src="https://github.com/Rohan077/Free-fire-alarm-system/blob/master/images/ezgif.com-gif-maker.gif"><img align="left" width="300" height="550" src="https://github.com/Rohan077/Free-fire-alarm-system/blob/master/images/ezgif.com-gif-maker%20(1).gif"></pre>
 
 A new Flutter project.
 
