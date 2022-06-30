@@ -23,6 +23,7 @@ class _ListCardState extends State<ListCard> {
         margin: EdgeInsets.all(5),
         child: Card(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          shadowColor: Colors.redAccent.shade100,
           elevation: 10,
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -32,7 +33,7 @@ class _ListCardState extends State<ListCard> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius:BorderRadius.all(Radius.circular(5)),
-                    color: Colors.red,
+                    color: Color(0xffD73502),
                   ),
                   child: ListTile(
                     leading: Image.asset("images/firefighter.png",scale: 12,),
@@ -74,7 +75,6 @@ class _ListCardState extends State<ListCard> {
                     FlatButton(
                       child: const Text('Whatsapp',style: TextStyle(color: Colors.green,),),
                       onPressed: () async {
-
                         await FlutterLaunch.launchWhatsapp(phone: widget.whatsapp, message: "Hey, emergency! A fire broke out at position: $lat, $long.");
 
                       },
@@ -90,7 +90,7 @@ class _ListCardState extends State<ListCard> {
                     SizedBox(width: 0.5,),
                     FlatButton(
                       child: const Text('Call'),
-                      color: Colors.red,
+                      color: Color(0xffD73502),
                       onPressed: () {
                         launch("tel://"+widget.phone);
                       }

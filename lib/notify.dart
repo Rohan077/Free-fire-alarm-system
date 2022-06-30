@@ -127,7 +127,7 @@ class _NotifyState extends State<Notify> {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.0),
-                      color: Colors.red,
+                      color: Color(0xffD73502),
                     ),
                     padding: EdgeInsets.all(15),
                     child: Text(
@@ -150,9 +150,9 @@ class _NotifyState extends State<Notify> {
                       height: MediaQuery.of(context).size.height / 2.5,
                       ringColor: Colors.grey[200]!,
                       ringGradient: null,
-                      fillColor: Colors.redAccent[100]!,
+                      fillColor: Colors.redAccent.shade100,
                       fillGradient: null,
-                      backgroundColor: Colors.red[500],
+                      backgroundColor: Color(0xffD73502),
                       backgroundGradient: null,
                       strokeWidth: 20.0,
                       strokeCap: StrokeCap.round,
@@ -180,6 +180,7 @@ class _NotifyState extends State<Notify> {
                     },
                     label: Text("Tap For " + widget.payload),
                     icon: Icon(Icons.cancel),
+                    backgroundColor: Color(0xffD73502),
                   ),
                 ],
               ),

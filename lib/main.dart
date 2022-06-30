@@ -2,10 +2,12 @@ import 'package:bordered_text/bordered_text.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-
+import 'package:flutter_config/flutter_config.dart';
 import 'homepage.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await FlutterConfig.loadEnvVariables();
   runApp(MyApp());
 }
 
@@ -65,7 +67,7 @@ class MyApp extends StatelessWidget {
             ),
       },
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        // primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
     );

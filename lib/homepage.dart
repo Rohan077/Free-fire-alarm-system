@@ -10,6 +10,10 @@ import 'notify.dart';
 
 String? update = "  Chandigarh";
 final myController = TextEditingController(text: update);
+_callNumber() async {
+  const number = '08133811679'; //set the number here
+  await FlutterPhoneDirectCaller.callNumber(number);
+}
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({required this.title}) : super();
@@ -96,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
         drawer: Padding(
           padding: const EdgeInsets.only(right: 20.0),
           child: Drawer(
-            backgroundColor: Colors.red.shade100,
+            backgroundColor: Colors.red.shade50,
             child: DrawerHeader(
               child: Container(
                 child: Center(child: Text("Welcome to free!")),
@@ -104,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-        backgroundColor: Colors.red.shade100,
+        backgroundColor: Colors.red.shade50,
         appBar: AppBar(
           title: Text(widget.title),
           actions: [
@@ -119,6 +123,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             )
           ],
+          backgroundColor: Color(0xffD73502),
+          shadowColor: Colors.redAccent.shade100,
           elevation: 5,
           centerTitle: true,
           shape: RoundedRectangleBorder(
@@ -135,8 +141,11 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Card(
+                // color: Color(0xffD73502),
+                shadowColor: Colors.redAccent.shade100,
                 elevation: 5,
                 child: TextFormField(
+                  cursorColor: Color(0xffD73502),
                   // initialValue: "Love",
                   controller: myController,
                   onFieldSubmitted: (text) => setState(() {
@@ -146,9 +155,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   }),
                   // initialValue: "myController.text",
                   decoration: InputDecoration(
+                    prefixIconColor: Color(0xffD73502),
+                    suffixIconColor: Color(0xffD73502),
                     labelText: 'Search Location',
                     hintText: "Enter a city",
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                    ),
+                    focusColor: Color(0xffD73502),
+                    fillColor: Color(0xffD73502),
+                    hoverColor: Color(0xffD73502),
+                    iconColor: Color(0xffD73502),
                     suffixIcon: Icon(
                       Icons.location_on,
                     ),
@@ -164,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ? PhotosList(photos: snapshot.data!)
                       : Padding(
                         padding: const EdgeInsets.all(15.0),
-                        child: CircularProgressIndicator(),
+                        child: CircularProgressIndicator(color: Color(0xffD73502),),
                       );
                 },
               ),
@@ -172,15 +188,16 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         floatingActionButton: FloatingActionButton.extended(
+
           onPressed: () async {
-            const number = '101'; //set the number here
-            await FlutterPhoneDirectCaller.callNumber(number);
+            _callNumber();
           },
           icon: Icon(
             Icons.local_hospital_outlined,
           ),
           elevation: 5,
           label: Text("SOS"),
+          backgroundColor: Color(0xffD73502),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),

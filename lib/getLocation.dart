@@ -7,6 +7,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 import 'card.dart';
 import 'homepage.dart';
+import 'package:flutter_config/flutter_config.dart';
 
 var lat,long;
 
@@ -51,9 +52,9 @@ Future<List<Images>> fetchPhotos(http.Client client) async {
 
 
   final response = await client.get(Uri.parse(
-      "https://serpapi.com/search.json?engine=google_maps&q=nearest,+firestation"
+      FlutterConfig.get('API_URL')+
       "&ll=@$lat,$long,15.1z&type=search&"
-      "api_key=41b6abadcf7292aca5f538524cd67c89700d5afa276ff5e3dd5c0140a64a0e3e"));
+      "api_key="+FlutterConfig.get('API_KEY')));
   // print(response.body);
 
   // Use the compute function to run parsePhotos in a separate isolate.
