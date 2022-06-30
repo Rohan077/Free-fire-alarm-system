@@ -4,6 +4,7 @@ Free or fire recognition emergency element for now is a smart fire alarming appl
 
 <pre><img align="left" width="300" height="550" src="https://github.com/Rohan077/Free-fire-alarm-system/blob/master/images/ezgif.com-gif-maker.gif"><img align="left" width="300" height="550" src="https://github.com/Rohan077/Free-fire-alarm-system/blob/master/images/ezgif.com-gif-maker%20(1).gif"></pre>
 
+<b>Note:</b> Add .env file with API_URL= your_serp_search_url and API_KEY = your_key
 A new Flutter project.
 
 ## Getting Started
